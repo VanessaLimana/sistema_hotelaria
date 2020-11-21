@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Lista de clientes</title>
+
+		<!-- bootstrap CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- custom CSS -->
+		<link href="app/assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+
+		<!-- our app will be injected here -->
+		<div id="app"></div>
+
+		<!-- jQuery library -->
+		<script src="app/assets/js/jquery.js"></script>
+		<script src="app/assets/js/jquery.mask.js"></script>
+
+		<!-- bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<!-- bootbox for confirm pop up -->
+		<script src="app/assets/js/bootbox.min.js"></script>
+
+		<!-- app js script -->
+		<script src="app/app.js"></script>
+
+		<!-- clientes scripts -->
+		<script src="app/clientes/read-clientes.js"></script>
+		<script src="app/clientes/create-clientes.js"></script>
+		<script src="app/clientes/read-one-cliente.js"></script>
+		<script src="app/clientes/delete-cliente.js"></script>
+		<script src="app/clientes/clientes.js"></script>
+		<script src="app/clientes/search-clientes.js"></script>
+		<script src="app/clientes/update-cliente.js"></script>
+
+		<script>
+			$(document).on("focus", ".cpf-mask", function() {
+				$(this).mask("000.000.000-00", {clearIfNotMatch: true});
+			});
+			
+			$(document).on("focus", ".telefone-mask", function() {
+				$(this).mask("(00) 000000000", {clearIfNotMatch: true});
+			});
+		</script>
+	</body>
+</html>
+<!-- https://www.codeofaninja.com/2016/07/react-crud-tutorial.html -->
